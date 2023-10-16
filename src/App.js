@@ -32,10 +32,14 @@ function App() {
     }
 
   }
+  const onCheckout = () => {
+    tele.MainButton.text = "Pay";
+    tele.MainButton.show();
+  }
   return (
     <div>
       <h1 className='heading'>Food OrDer</h1>
-      <Cart cartItems = {cartItems} />
+      <Cart cartItems = {cartItems} onCheckout={onCheckout} />
       <div className='cards__container'>
         {
           foods.map((food)=>{
